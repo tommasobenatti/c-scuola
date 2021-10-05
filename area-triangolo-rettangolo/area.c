@@ -21,7 +21,7 @@ int main(){
 	nArea_rettangolo = nBase * nAltezza;
 	fArea_triangolo = (float) (nBase * nAltezza) / 2;
 
-// Mostra i dati all'utente	
+// Mostra i risultati all'utente	
 	printf("\n> L'area del rettangolo e': %d", nArea_rettangolo);
 	printf("\n> L'area del triangolo e': %f", fArea_triangolo);
 	
