@@ -1,4 +1,5 @@
 #include<stdio.h>
+// Codice disponibile al link https://github.com/tommasobenatti/c-scuola
 
 int main(){
 	
