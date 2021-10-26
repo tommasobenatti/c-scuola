@@ -4,3 +4,8 @@
 /*.exe
 .DS_Store
 /.DS_Store
+*.dSYM
+/*.dSYM
+.vscode
+/.vscode
+*.vscode
