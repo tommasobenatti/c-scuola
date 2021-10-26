@@ -2,3 +2,5 @@
 .exe
 /.exe
 /*.exe
+.DS_Store
+/.DS_Store
