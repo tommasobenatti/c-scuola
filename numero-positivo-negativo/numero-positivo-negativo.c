@@ -6,7 +6,7 @@ int main(){
 	int nNumero;
 	
 // Titolo
-	printf("Calcolare se il numero è positivo o negativo - Tommaso Benatti 3T 12/10/2021 Project nr.5 - ITI Copernico Ferrara\n\n");
+	printf("Calcolare se il numero Ã¨ positivo o negativo - Tommaso Benatti 3T 12/10/2021 Project nr.5 - ITI Copernico Ferrara\n\n");
 	
 // Chiedi all'utente i dati	
 	printf("Inserisci il numero:\n> ");
