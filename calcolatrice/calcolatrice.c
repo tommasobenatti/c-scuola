@@ -26,15 +26,15 @@ int main()
     {
         case '+': // Addizione
             fRisultato = fNum1 + fNum2;
-            printf("Il risultato dell'addizione è: %f", fRisultato);
+            printf("Il risultato dell'addizione e': %f", fRisultato);
             break;
         case '-': // Sottrazione
             fRisultato = fNum1 - fNum2;
-            printf("Il risultato della sottrazione è: %f", fRisultato);
+            printf("Il risultato della sottrazione e': %f", fRisultato);
             break;
         case '*': // Moltiplicazione
             fRisultato = fNum1 * fNum2;
-            printf("Il risultato della moltiplicazione è: %f", fRisultato);
+            printf("Il risultato della moltiplicazione e': %f", fRisultato);
             break;
         case '/': // Divisione
             if(fNum2 == 0)
@@ -44,7 +44,7 @@ int main()
             else
             {
                 fRisultato = fNum1 / fNum2;
-                printf("Il risultato della divisione è: %f", fRisultato); // Ha diviso per un numero diverso da zero
+                printf("Il risultato della divisione e': %f", fRisultato); // Ha diviso per un numero diverso da zero
             }
             break;
         default:
