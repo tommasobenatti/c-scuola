@@ -17,43 +17,16 @@ int main(){
 // Elaborazione dati
     switch (nMese)
     {
-        case 1:
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
             nGiorni = 31;
             break;
         case 2:
             nGiorni = 28;
             printf("Se l'anno e' bisestile ne ha 29\n");
             break;
-        case 3:
-            nGiorni = 31;
-            break;
-        case 4:
+        case 4: case 6: case 9: case 11:
             nGiorni = 30;
             break;  
-        case 5:
-            nGiorni = 31;
-            break;
-        case 6:
-            nGiorni = 30;
-            break; 
-        case 7:
-            nGiorni = 31;
-            break;
-        case 8:
-            nGiorni = 31;
-            break;
-        case 9:
-            nGiorni = 30;
-            break; 
-        case 10:
-            nGiorni = 31;
-            break;
-        case 11:
-            nGiorni = 30;
-            break;
-        case 12:
-            nGiorni = 31;
-            break;
         default:
             printf("Mese non valido");
             break;
