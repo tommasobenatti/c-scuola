@@ -1,0 +1,15 @@
+1) Spiega il ciclo a condizione iniziale : while
+
+Il ciclo while, detto anche precondizionale è un ciclo che termina quando una condizione espressa all'inizio della funziona è falsa.
+
+
+2) Spiega il ciclo a condizione finale: do while
+
+Il ciclo do while, detto anche postcondizionale è un ciclo che esegue il codice al suo interno e alla fine dell'esecuzione controlla la condizione, 
+se è falsa esce dal ciclo e se è vera continua
+
+
+3) Quando è conveniente utilizzare il ciclo do while rispetto al while?
+
+è preferibile usare il ciclo do while postcondizionale quando bisogna eseguire il codice almeno una volta, perché nel precondizionale se la condizione è falsa
+già dall'inizio non esegue nemmeno il contenuto
