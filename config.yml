@@ -1,0 +1,450 @@
+# / ============================================================ \
+# |    This is the main Bukkit configuration file of Parties     |
+# \ ============================================================ /
+#
+# For any problem be sure to:
+# - Read the entire documentation on: https://alessiodp.com/docs/parties
+# - Join our Discord for further help: https://discord.alessiodp.com
+#
+
+# / =============================== \
+# |        PARTIES  SETTINGS        |
+# \ =============================== /
+parties:
+  # [Check for plugins updates]
+  # Parties will check for updates when the server finishes to load.
+  updates:
+    check: true
+    warn: true
+
+  # [Enable logging system]
+  # => debug:      Print debug messages
+  # => save-file:  Save any log into a text file
+  logging:
+    debug: false
+    party-chat: false
+    save-file:
+      enable: false
+      format: "%date% [%time%] %message%\n"
+      file: "log.txt"
+
+  # [Enable debug command]
+  # Useful to debug problems related to the plugin
+  debug-command: true
+
+  # Hook into Skript plugin
+  hook-into-skript: true
+
+  # [Enable BungeeCord support]
+  # If you are using Parties on BungeeCord you should enable this option.
+  # With this option enabled, THIS Parties won't directly handle player actions
+  bungeecord:
+    enable: false
+    # Name and id are used in placeholders %server_name% and %server_id%
+    # Feel free to use them if you wanna know where the message is coming from
+    server-name: ServerName
+    server-id: server
+    # Experts only!
+    # The plugin need to keep data in sync with BungeeCord Parties
+    # You can disable it to increase performances a bit
+    # If you do not use Parties in Spigot servers, you can disable them
+    packets:
+      # These options will stop to handle data from bungee server
+      load-players: true
+      load-parties: true
+      player-sync: true
+      party-sync: true
+      config-sync: true
+      chat: true
+      sounds: true
+
+
+# / =============================== \
+# |        STORAGE  SETTINGS        |
+# \ =============================== /
+storage:
+  # [Database type]
+  # What type of storage the plugin should use? Database storage types:
+  # => yaml       | [File]   Save the data into a YAML file
+  # => mariadb    | [Remote] Save the data into a MariaDB database
+  # => mysql      | [Remote] Save the data into a MySQL database
+  # => postgresql | [Remote] Save the data into a PostgreSQL database
+  # => sqlite     | [File]   Save the data into a SQLite database
+  # => h2         | [File]   Save the data into a H2 database (default)
+  database-storage-type: h2
+
+  storage-settings:
+    # [YAML settings]
+    yaml:
+      database-file: database.yml
+
+    # [General SQL settings]
+    # General settings for sql databases, recommended to use default values
+    general-sql-settings:
+      prefix: 'parties_'
+
+    # [SQLite settings]
+    sqlite:
+      database-file: database.db
+
+    # [H2 settings]
+    h2:
+      database-file: database
+
+    # [Remote SQL settings - MySQL/MariaDB/PostgreSQL]
+    remote-sql:
+      address: localhost
+      port: '3306'
+      database: database
+      username: username
+      password: password
+      # Size of the connection pool
+      pool-size: 10
+      # Lifetime of each connection, in milliseconds (Default: 30 minutes = 1800000ms)
+      connection-lifetime: 1800000
+      # Property used to alert when the connection is not using a valid SSL certificate
+      use-ssl: false
+      charset: 'utf8'
+
+
+# / =============================== \
+# |       ADDITIONAL SETTINGS       |
+# \ =============================== /
+additional:
+  # [Auto command system]
+  # All party-mates will use the same command executed by the leader (Rank permission: party.autocommand)
+  # You can configure the leader or any other rank with rank permissions
+  #
+  # With regex-whitelist you can choose which command should be replicated by other party-mates
+  # You need to use REGEX (google it)
+  # The default example will allows any command except /party, /pay and /money
+  auto-command:
+    enable: false
+    regex-whitelist: '^(\/join|\/anothercommand).*'
+
+  # [Exp system]
+  # Full documentation here: https://alessiodp.com/docs/parties/explevels/
+  # You can setup a level system for parties or decide how to handle dropped mob exp
+  exp-system:
+    enable: false
+    levels:
+      enable: true
+      # Modes: progressive, fixed
+      mode: progressive
+
+      # [Progressive mode]
+      # Make infinite levels with a progressive multiplier
+      progressive:
+        # Level 1: 50, Level 2: 100, Level 3: 200, Level 4: 400
+        # Special tags:
+        # => %previous%: Previous level experience
+        start-level-experience: 50
+        level-experience: "%previous% * 2"
+        # This is a special option that prevents loops in calculation
+        # Set this on false if you know what you are doing
+        safe-calculation: true
+
+      # [Fixed mode]
+      # Make a complete list of finite party levels
+      # Example: Level 1 is from 0 to 49, Level 2 is from 50 to 149, Level 2 is from 150 to 349
+      #
+      # repeat-last-one =>  Should the last one end the number of levels?
+      #                     If on true, the number of levels will be infinite
+      #                     Otherwise the party will reach that level as maximum
+      fixed:
+        repeat-last-one: true
+        list:
+          - 50
+          - 100
+          - 200
+          - 350
+          - 650
+          - 900
+
+
+    # [Exp dropping]
+    # Here you can handle how dropped exp should be handled, you can set:
+    # => sharing:           Share dropped experience between party-mates
+    # => exp-to-get:        How to handle dropped exp and decide which
+    #                         experience to get
+    # => convert-exp-into:  How to convert the dropped experience
+    exp-drop:
+      enable: true
+      sharing:
+        enable: false
+        if-more-than: 1
+        range: 30
+        # Convert numbers from 10.1234 to 10
+        round-exp-drop: true
+        # Use JavaScript here
+        # Special tags:
+        # => %exp%:             Dropped mob experience
+        # => %number_players%:  Number of players in range
+        # => %level%:           Current level of the party
+        # => %distance%:        Distance between the player and mob
+        divide-formula-killer: "%exp% / %number_players%"
+        divide-formula-others: "%exp% / %number_players%"
+      exp-to-get:
+        # Experience to get options:
+        # => normal:    Get Minecraft normal experience
+        # => skillapi:  Get SkillAPI experience
+        normal: true
+        skillapi: false
+      convert-exp-into:
+        # Convert experience options:
+        # => party:       Send the exp to the party (total experience)
+        # => normal:      Send it as vanilla Minecraft experience
+        # => levelpoints: Send it as LevelPoints experience
+        # => mmocore:     Send it as MMOCore experience
+        # => skillapi:    Send it as SkillAPI experience
+        #
+        # You can use 'remove-real-exp' to prevent double-exp drop
+        # More information here: https://alessiodp.com/docs/parties/explevels
+        normal: party
+        skillapi: party
+        remove-real-exp: false
+      addons:
+        # [LevelPoints support]
+        # Give LevelPoints experience instead of vanilla
+        levelpoints:
+          enable: false
+        # [MMOCore support]
+        # Give MMOCore experience instead of vanilla
+        mmocore:
+          enable: false
+        # [SkillAPI support]
+        # Get experience drops directly from SkillAPI configs
+        # Give SkillAPI experience instead of vanilla
+        # The SkillAPI option 'use-exp-orbs' must be on false
+        skillapi:
+          enable: false
+          exp-source: "MOB"
+        # [MythicMobs support]
+        # Get experience drops directly from MythicMobs drop tables
+        # Exp supported are 'exp' and 'skillapi-exp'
+        # With option 'handle-only-mm-mobs', Parties will only handle MythicMobs entities
+        mythicmobs:
+          enable: false
+          handle-only-mm-mobs: true
+
+  # [Follow system]
+  # When the party leader joins a world, the entire party will follow him
+  # => toggle-command:                Make the follow toggleable with /party follow
+  # => delay:                         Teleport other players after a specific delay (in milliseconds)
+  # => teleport-to-the-same-location: Teleport to the same world or player
+  # => timeout-portal:                Timeout before player can re-use portal (in milliseconds)
+  # => perform-commands:              Perform commands after a specific delay (in milliseconds)
+  follow:
+    enable: false
+    toggle-command: false
+    delay: 0
+    teleport-to-the-same-location: true
+    timeout-portal: 5000
+    perform-commands:
+      enable: false
+      delay: 2000
+      commands: [ ]
+    # List of worlds not allowed to join into as group (Regexes allowed)
+    blocked-worlds: []
+
+  # [Moderation]
+  # Auto kick banned users
+  # Prevent to speak in party chat if the player is muted
+  # Select what plugin to handle in 'plugins'
+  moderation:
+    enable: false
+    prevent-chat-muted: true
+    auto-kick-banned: true
+    handle-server-ban: true
+    plugins:
+      advancedban: false
+      banmanager: false
+      essentials: false
+
+  # [Mute]
+  # Enable mute system.
+  # If an user uses mute command, he won't receive notifications
+  mute:
+    enable: false
+    block:
+      invite: true
+
+  # [Placeholders]
+  # Here you can setup your own custom placeholders.
+  # Custom placeholders will return by default '' if the player is not in a party
+  placeholders:
+    customs:
+      example1: "[%color_code%%party%] "
+      example2: "[%player_rank_chat% %party%] "
+      example3: "&b%party% &7- "
+
+
+# / =============================== \
+# |         ADDONS SETTINGS         |
+# \ =============================== /
+addons:
+  # [Claim plugins]
+  # Supporting: GriefPrevention & GriefDefender
+  # Enable a command that you can use to grant permissions to all party members
+  # The command is "/party claim" and can be run only by Owner/Manager of the claim
+  claim:
+    enable: false
+    # Only: griefprevention / griefdefender
+    plugin: griefprevention
+    need-to-be-owner-claim: false
+    sub-commands:
+      trust: "trust"
+      container: "container"
+      access: "access"
+      manager: "manager"
+      remove: "remove"
+
+  # [Dynmap]
+  # Generate a map mark for each party home
+  # Warning: If you are using BungeeCord, be sure to set the right server id at the start of config.yml
+  dynmap:
+    enable: false
+    hide-by-default: false
+    settings:
+      # Show marker only if:
+      minimum-players: 3
+    markers:
+      layer: "Party homes"
+      # HTML allowed here
+      label-single: "<b>%party%</b>'s home"
+      # You can use %home% for home name
+      label-multiple: "<b>%party%</b>'s home: %home%"
+      # Use Dynmap icon names
+      icon: "house"
+
+  # [Vault]
+  # Set a price to each party command (use doubles: 1.1, 1.5, ...)
+  # Use permission 'parties.admin.vault.bypass' to bypass price
+  vault:
+    enable: false
+    # Enable the command "/party confirm" to confirm the payment
+    # If disabled, the user will pay on command execution
+    confirm-command:
+      enable: true
+      timeout: 10000
+    price-commands:
+      ask: 0.0
+      claim: 0.0
+      color: 0.0
+      create: 0.0
+      desc: 0.0
+      follow: 0.0
+      home: 0.0
+      join: 0.0
+      motd: 0.0
+      nickname: 0.0
+      password: 0.0
+      protection: 0.0
+      rename: 0.0
+      set-home: 0.0
+      tag: 0.0
+      teleport: 0.0
+
+
+# / =============================== \
+# |        COMMANDS SETTINGS        |
+# \ =============================== /
+commands:
+  # Enable tab support (/party <tab> to see every allowed command)
+  # Warning: If you change any of this settings you need to restart the server
+  tab-support: true
+  help-pages:
+    commands-per-page: 9
+  main-commands:
+    party:
+      command: 'party'
+      description: 'Parties help page'
+      aliases: []
+    p:
+      command: 'p'
+      description: 'Send a party message'
+      aliases: []
+  sub-commands:
+    help: 'help'
+    accept: 'accept'
+    ask: 'ask'
+    chat: 'chat'
+    claim: 'claim'
+    color: 'color'
+    confirm: 'confirm'
+    create: 'create'
+    createfixed: 'createfixed'
+    debug: 'debug'
+    delete: 'delete'
+    deny: 'deny'
+    desc: 'desc'
+    follow: 'follow'
+    home: 'home'
+    ignore: 'ignore'
+    info: 'info'
+    invite: 'invite'
+    join: 'join'
+    kick: 'kick'
+    leave: 'leave'
+    list: 'list'
+    motd: 'motd'
+    mute: 'mute'
+    nickname: 'nickname'
+    password: 'password'
+    protection: 'protection'
+    rank: 'rank'
+    reload: 'reload'
+    rename: 'rename'
+    sethome: 'sethome'
+    spy: 'spy'
+    tag: 'tag'
+    teleport: 'teleport'
+    version: 'version'
+  misc-commands:
+    config: 'config'
+    exp: 'exp'
+    party: 'party'
+    player: 'player'
+    word-on: 'on'
+    word-off: 'off'
+    silent: 'silent'
+    remove: 'remove'
+  order:
+  - help
+  - create
+  - createfixed
+  - accept
+  - deny
+  - ask
+  - join
+  - ignore
+  - mute
+  - p
+  - leave
+  - invite
+  - info
+  - list
+  - chat
+  - tag
+  - desc
+  - motd
+  - nickname
+  - protection
+  - follow
+  - home
+  - sethome
+  - color
+  - claim
+  - teleport
+  - password
+  - rank
+  - rename
+  - kick
+  - spy
+  - delete
+  - debug
+  - reload
+  - version
+
+dont-edit-this:
+  version: 14
