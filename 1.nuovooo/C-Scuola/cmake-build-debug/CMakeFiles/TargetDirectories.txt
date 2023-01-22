@@ -1,0 +1,3 @@
+/Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug/CMakeFiles/C_Scuola.dir
+/Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,259 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: C_Scuola
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target C_Scuola
+
+
+#############################################
+# Order-only phony target for C_Scuola
+
+build cmake_object_order_depends_target_C_Scuola: phony || CMakeFiles/C_Scuola.dir
+
+build CMakeFiles/C_Scuola.dir/27-10/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/27-10/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/27-10/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/27-10
+
+build CMakeFiles/C_Scuola.dir/27-10/es2.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/27-10/es2.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/27-10/es2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/27-10
+
+build CMakeFiles/C_Scuola.dir/27-10/es3.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/27-10/es3.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/27-10/es3.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/27-10
+
+build CMakeFiles/C_Scuola.dir/27-10/es4.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/27-10/es4.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/27-10/es4.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/27-10
+
+build CMakeFiles/C_Scuola.dir/3-11/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/3-11/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/3-11/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/3-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es2.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es2.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es3.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es3.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es3.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es4.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es4.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es4.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/voto.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/voto.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/voto.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es6.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es6.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es6.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/10-11/es7.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/10-11/es7.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/10-11/es7.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/10-11
+
+build CMakeFiles/C_Scuola.dir/VER-1-12/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/VER-1-12/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/VER-1-12/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/VER-1-12
+
+build CMakeFiles/C_Scuola.dir/VER-1-12/es2.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/VER-1-12/es2.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/VER-1-12/es2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/VER-1-12
+
+build CMakeFiles/C_Scuola.dir/15-12/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/15-12/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/15-12/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/15-12
+
+build CMakeFiles/C_Scuola.dir/15-12/es2.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/15-12/es2.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/15-12/es2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/15-12
+
+build CMakeFiles/C_Scuola.dir/15-12/es3.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/15-12/es3.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/15-12/es3.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/15-12
+
+build CMakeFiles/C_Scuola.dir/19-01-23/es1.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/19-01-23/es1.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/19-01-23/es1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/19-01-23
+
+build CMakeFiles/C_Scuola.dir/19-01-23/es2.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/19-01-23/es2.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/19-01-23/es2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/19-01-23
+
+build CMakeFiles/C_Scuola.dir/19-01-23/es4.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/19-01-23/es4.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/19-01-23/es4.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/19-01-23
+
+build CMakeFiles/C_Scuola.dir/19-01-23/es5.c.o: C_COMPILER__C_Scuola_Debug /Users/tommasobenatti/Documents/C-Scuola/19-01-23/es5.c || cmake_object_order_depends_target_C_Scuola
+  DEP_FILE = CMakeFiles/C_Scuola.dir/19-01-23/es5.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Scuola.dir/19-01-23
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target C_Scuola
+
+
+#############################################
+# Link the executable C_Scuola
+
+build C_Scuola: C_EXECUTABLE_LINKER__C_Scuola_Debug CMakeFiles/C_Scuola.dir/27-10/es1.c.o CMakeFiles/C_Scuola.dir/27-10/es2.c.o CMakeFiles/C_Scuola.dir/27-10/es3.c.o CMakeFiles/C_Scuola.dir/27-10/es4.c.o CMakeFiles/C_Scuola.dir/3-11/es1.c.o CMakeFiles/C_Scuola.dir/10-11/es1.c.o CMakeFiles/C_Scuola.dir/10-11/es2.c.o CMakeFiles/C_Scuola.dir/10-11/es3.c.o CMakeFiles/C_Scuola.dir/10-11/es4.c.o CMakeFiles/C_Scuola.dir/10-11/voto.c.o CMakeFiles/C_Scuola.dir/10-11/es6.c.o CMakeFiles/C_Scuola.dir/10-11/es7.c.o CMakeFiles/C_Scuola.dir/VER-1-12/es1.c.o CMakeFiles/C_Scuola.dir/VER-1-12/es2.c.o CMakeFiles/C_Scuola.dir/15-12/es1.c.o CMakeFiles/C_Scuola.dir/15-12/es2.c.o CMakeFiles/C_Scuola.dir/15-12/es3.c.o CMakeFiles/C_Scuola.dir/19-01-23/es1.c.o CMakeFiles/C_Scuola.dir/19-01-23/es2.c.o CMakeFiles/C_Scuola.dir/19-01-23/es4.c.o CMakeFiles/C_Scuola.dir/19-01-23/es5.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
+  OBJECT_DIR = CMakeFiles/C_Scuola.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = C_Scuola
+  TARGET_PDB = C_Scuola.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug && "/Users/tommasobenatti/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug && "/Users/tommasobenatti/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/tommasobenatti/Documents/C-Scuola -B/Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tommasobenatti/Documents/C-Scuola/cmake-build-debug
+
+build all: phony C_Scuola
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/tommasobenatti/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
